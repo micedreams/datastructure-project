@@ -52,25 +52,26 @@ bought_flavour=gets
 puts"in what quantity do u want #{bought_flavour}candy"
 bought_count=gets
 bought_count=bought_count.to_i
+    inventry_hash = {}
 
-if(@inventry_hash.fetch(bought_flavour)>bought_count)
-  @inventry_hash[bought_flavour]=@inventry_hash.fetch(bought_flavour).to_i - bought_count
+if(inventry_hash.fetch(bought_flavour)>bought_count)
+  inventry_hash[bought_flavour]=inventry_hash.fetch(bought_flavour).to_i - bought_count
   
   
   puts"----------------------------------------"
   
   puts "Here is the content that was in the hash: "
 
-  @inventry_hash.each do |key, value|
+  inventry_hash.each do |key, value|
     puts " #{key} => #{value}"
   
   
   end
    
-  a=@inventry_hash.values
+  a=inventry_hash.values
   puts"#{a}"
   
   values_in_int = a.map { |a| a.to_i } # this line converts the string values to int
-  @sum=values_in_int.sum
-  puts "the sum is #{@sum}"
+  sum=values_in_int.sum
+  puts "the sum is #{sum}"
 end
