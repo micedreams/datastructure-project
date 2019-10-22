@@ -1,11 +1,6 @@
-
-
-puts"\nHow many candy flavours count u Want to add :"
-flavour=gets
-flavour=flavour.to_i
-puts"\n"
+def inventry(number)
 inventry_hash = {}
-(1..flavour).each do
+(1..number).each do
   input = ""
   name = ""
   count = ""
@@ -38,4 +33,12 @@ puts"#{a}"
 values_in_int = a.map { |a| a.to_i } # this line converts the string values to int
 sum=values_in_int.sum
 puts "the sum is #{sum}"
+end
 
+puts"**********************************\n\tWelcome to candy shop\n**********************************"
+puts"\nHow many candy flavours count u Want to add :"
+  flavour=gets
+  flavour=flavour.to_i
+  puts"\n"
+
+inventry(flavour)
