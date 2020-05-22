@@ -10,7 +10,7 @@ def multiply(x, y)
     # "column is count of all the 1st elements of nested arrays of array y [i.e. y[0].length]"
 
 
-
+# each loop over for because for loop holds on to values i,j & k even after the loop is done there
     (0..result.length - 1).each do |i|   #"j loops from 0 to count of(all the regular elements of result array)-1)"
         (0..result[0].length - 1).each do |j| #"j loops from 0 to count of(all the 1st elements of nested arrays of result array)-1)"
             (0..x[0].length - 1).each do |k| #"k loops from 0 to count of(all the 1st elements of nested arrays of array x)-1)"
